@@ -10,21 +10,21 @@
             <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Kurumsal</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item">
-              <a class="nav-link" href="{{route('backoffice.aboutus')}}"><i class="icon-puzzle"></i> Hakkımızda</a>
+              <a class="nav-link" href="{{ route('backoffice.aboutus') }}"><i class="icon-puzzle"></i> Hakkımızda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('backoffice.history')}}"><i class="icon-puzzle"></i> Tarihçe</a>
+                <a class="nav-link" href="{{ route('backoffice.history') }}"><i class="icon-puzzle"></i> Tarihçe</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('backoffice.policy')}}"><i class="icon-puzzle"></i>Kalite ve Müşteri Memnuniyeti Politikası</a>
+                <a class="nav-link" href="{{ route('backoffice.policy') }}"><i class="icon-puzzle"></i>Kalite ve Müşteri Memnuniyeti Politikası</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('backoffice.faq')}}"><i class="icon-puzzle"></i> SSS</a>
+                <a class="nav-link" href="{{ route('backoffice.faq') }}"><i class="icon-puzzle"></i> SSS</a>
               </li>
             </ul>
           </li>
           <li class="nav-item nav-dropdown">
-            <a class="nav-link" href="#"><i class="icon-puzzle"></i> Ürünlerimiz</a>
+            <a class="nav-link" href="{{ route('backoffice.product') }}"><i class="icon-puzzle"></i> Ürünlerimiz</a>
           </li>
           <li class="nav-item nav-dropdown">
             <a class="nav-link" href="#"><i class="icon-puzzle"></i> Bayilik Servislerimiz</a>
