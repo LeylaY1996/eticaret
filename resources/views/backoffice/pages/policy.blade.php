@@ -1,6 +1,6 @@
 @extends('backoffice.layout.master')
 
-@section('page.title','Hakkımızda')
+@section('page.title','Kalite ve Müşteri Memnuniyeti Politikası')
 
 @section('content')
 <div class="card">

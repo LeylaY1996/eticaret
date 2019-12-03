@@ -11,9 +11,14 @@
 |
 */
 
-Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice'],function() {
+Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice.'],function() {
+
     Route::get('/anasayfa','DashboardController@index')->name('anasayfa');
-    Route::get('/hakkimizda','AboutusController@index')->name('aboutus');
+    Route::get('/hakkimizda','AboutusController@aboutus')->name('aboutus');
+    Route::get('/tarihce','HistoryController@history')->name('history');
+    Route::get('/politika','PolicyController@policy')->name('policy');
+    Route::get('/sss','FaqController@faq')->name('faq');
+    Route::get('/ürün','ProductController@product')->name('product');
 });
 
 

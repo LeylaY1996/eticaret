@@ -1,10 +1,10 @@
 @extends('backoffice.layout.master')
 
-@section('page.title','Hakkımızda')
+@section('page.title','Tarihçe')
 
 @section('content')
 <div class="card">
-    <div class="card-header">Hakkımızda</div>
+    <div class="card-header">Tarihçe</div>
         <div class="tab-content" id="kuru-tabContent">
           <!--Hakkımızda-->
           <div class="tab-pane fade show active" id="kuru-aboutus" role="tabpanel" aria-labelledby="kuru-aboutus-tab">
