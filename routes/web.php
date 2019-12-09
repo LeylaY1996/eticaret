@@ -22,8 +22,7 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
     Route::get('/servis','ServiceController@services')->name('services');
     Route::get('/contact','ContactController@contact')->name('contact');
     Route::get('/campaigns','CampaignsController@campaigns')->name('campaigns');
-
-
+    Route::get('/price-list','PriceListController@priceList')->name('priceList');
 });
 
 

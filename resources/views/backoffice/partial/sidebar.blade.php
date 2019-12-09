@@ -36,7 +36,7 @@
             <a class="nav-link" href="{{ route('backoffice.campaigns') }}"><i class="icon-puzzle"></i> Kampanyalar</a>
           </li>
           <li class="nav-item nav-dropdown">
-            <a class="nav-link" href="#"><i class="icon-puzzle"></i>Fiyat Listesi</a>
+            <a class="nav-link" href="{{ route('backoffice.priceList') }}"><i class="icon-puzzle"></i>Fiyat Listesi</a>
           </li>
         </ul>
       </nav>
