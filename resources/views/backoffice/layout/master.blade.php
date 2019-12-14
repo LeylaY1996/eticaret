@@ -62,7 +62,7 @@
       <div class="container-fluid">
         <div class="animated fadeIn">
           <div class="row">
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-12">
                @yield('content') 
             </div>
           </div>

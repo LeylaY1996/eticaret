@@ -5,9 +5,9 @@
 @section('content')
 <div class="card">
     <div class="card-header">Tarihçe</div>
-        <div class="tab-content" id="kuru-tabContent">
+        <div class="tab-content" id="oney-tabContent">
           <!--Hakkımızda-->
-          <div class="tab-pane fade show active" id="kuru-aboutus" role="tabpanel" aria-labelledby="kuru-aboutus-tab">
+          <div class="tab-pane fade show active" id="oney-history" role="tabpanel" aria-labelledby="oney-history-tab">
             <form role="form" action="" method="post"
               enctype="multipart/form-data">
               {{ csrf_field() }}
@@ -21,7 +21,6 @@
                     <div class="form-group">
                         <img src="" alt="" style="width:20%">
                     </div>
-                
               </div>
               <!-- /.box-body -->
               <div class="form-group">
@@ -33,7 +32,6 @@
               </div>
               <div class="box-footer">
                 <input type="submit" class="btn btn-primary">
-                <a href='javascript:void(0)' class="btn btn-warning">Back</a>
               </div>
             </form>
           </div>
