@@ -14,7 +14,7 @@ class CreateAboutusTable extends Migration
     public function up()
     {
         Schema::create('aboutus', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('title');
             $table->string('image');
             $table->text('description');

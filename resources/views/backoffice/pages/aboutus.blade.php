@@ -15,11 +15,12 @@
         <form role="form" action="{{route('backoffice.aboutSave')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group">
+                <input type="text" class="form-control" name="title" id="title" placeholder="Başlık" value="">
                   <label for="image">Resim Seç</label>
                   <input type="file" name="image" id="image" class="form-control">
                 </div>
                 <div class="form-group">
-                  <img src="{{ asset('backoffice/asset/img/information/'. $about->image) }}" id="image" alt="" style="width:20%">
+                  <img src="{{ asset('backoffice/asset/img/information/') }}" id="image" alt="" style="width:20%">
                 </div>
             </div>
             <!-- /.box-body -->

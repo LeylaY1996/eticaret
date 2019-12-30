@@ -14,7 +14,7 @@ class CreateFaqCategoriesTable extends Migration
     public function up()
     {
         Schema::create('faq_categories', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('title');
             $table->string('slug')->nullable();
             $table->string('image')->nullable();

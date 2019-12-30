@@ -8,11 +8,12 @@
         <div class="tab-content" id="oney-tabContent">
           <!--Hakkımızda-->
           <div class="tab-pane fade show active" id="oney-history" role="tabpanel" aria-labelledby="oney-history-tab">
-            <form role="form" action="" method="post"
+            <form role="form" action="{{route('backoffice.historySave')}}" method="post"
               enctype="multipart/form-data">
               {{ csrf_field() }}
               
                   <div class="form-group">
+                      <input type="text" class="form-control" name="title" id="title" placeholder="Başlık" value="">
                     <label for="image">Resim Seç</label>
                     <input type="file" name="image" id="image" class="form-control">
                     <input type="hidden" name="type" value="1">

@@ -19,10 +19,10 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
     Route::post('hakkimizda-kaydet','AboutusController@aboutSave')->name('aboutSave');
 
     Route::get('/tarihce','HistoryController@history')->name('history');
-    Route::post('tarihce-kaydet','AboutusController@historySave')->name('historySave');
+    Route::post('tarihce-kaydet','HistoryController@historySave')->name('historySave');
 
     Route::get('/politika','PolicyController@policy')->name('policy');
-    Route::post('politika-kaydet','AboutusController@policySave')->name('policySave');
+    Route::post('politika-kaydet','PolicyController@policySave')->name('policySave');
 
     Route::get('/sss','FaqController@faq')->name('faq');
     Route::get('/ürün','ProductController@product')->name('product');
