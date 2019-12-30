@@ -3,173 +3,72 @@
 @section('page.title','Sıkça Sorulan Sorular')
 
 @section('content')
+
 <div class="card">
 	<div class="card-header">
-		İşlemler
+	  <strong>Sıkça Sorulan Sorular</strong>
 	</div>
 	<div class="card-body">
-		<!--Modallar(kategori ekle ve soru ekle)-->
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primaryModal"> Kategori
-			ekle</button>
-
-		<!--Modallar(kategori ekle ve soru ekle)-->
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primaryModal2">Soru
-			ekle</button>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col">
-		<ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">
-				<li class="nav-item">
-					<a class="nav-link" id="tab" data-toggle="pill" href="#cat" role="tab"
-						aria-controls="cat" aria-selected=""></a>
-				</li>
-		</ul>
-		
-	</div>
-</div>
-		<div class="col-sm-12">
-		  <div class="card">
-			<div class="card-header">
-			  <i class="fa fa-align-justify"></i> Collapse
-			  <small>accordion</small>
-			</div>
-			<div class="card-body">
-			  <div id="accordion" role="tablist">
-				<div class="card">
-				  <div class="card-header" role="tab" id="headingOne">
-					<h5 class="mb-0">
-					  <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				Collapsible Group Item #1
-			  </a>
-					</h5>
-				  </div>
-
-				  <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-					<div class="card-body">
-					  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-					  on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-					  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					</div>
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-header" role="tab" id="headingTwo">
-					<h5 class="mb-0">
-					  <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				Collapsible Group Item #2
-			  </a>
-					</h5>
-				  </div>
-				  <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-					<div class="card-body">
-					  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-					  on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-					  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					</div>
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-header" role="tab" id="headingThree">
-					<h5 class="mb-0">
-					  <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				Collapsible Group Item #3
-			  </a>
-					</h5>
-				  </div>
-				  <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-					<div class="card-body">
-					  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-					  on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-					  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
+	  <form action="{{route('backoffice.faqSave')}}" method="post">
+		{{ csrf_field() }}
+		<div class="form-group">
+		  <label for="question">Soru</label>
+		  <input type="question" id="question" name="question" class="form-control" placeholder="Soruyu giriniz..">
 		</div>
-	  </div>
-	</div>
-<div class="modal fade" id="primaryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-	style="display: none;">
-	<div class="modal-dialog modal-primary" role="document">
-		<form action="#" method="POST"></form>
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title">Kategori Başlıkları</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">×</span>
-				</button>
-			</div>
-			<!--	item->faq_category->title-->
-			<form action="" method="post">
-				{{ csrf_field() }}
-				<div class="modal-body">
-					<div class="form-group">
-						Kategori Ekle
-						<input type="text" name="title" id="title" size="60">
-					</div>
-
-					<div class="form-group">
-						<label for="image">Resim Seç</label>
-						<input type="file" name="image" id="image" class="form-control">
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-					<button type="submit" class="btn btn-primary">Ekle</button>
-				</div>
+		<div class="form-group">
+		  <label for="answer">Cevap</label>
+		  <textarea type="multiline" id="answer" name="answer" class="form-control" placeholder="Cevabı giriniz.."></textarea>
 		</div>
-		</form>
-	</div>
-	<!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
-</div>
-
-
-<div class="modal fade" id="primaryModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
-	aria-hidden="true" style="display: none;">
-	<div class="modal-dialog modal-primary" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title">Sorular</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">×</span>
-				</button>
-			</div>
-			<form action="" method="post">
-				{{ csrf_field() }}
-				<div class="modal-body">
-					<div class="form-group">
-						<label for="faq_category_id">Kategoriler</label>
-						<select class="form-control" id="faq_category_id" name="faq_category_id">
-								<option value=""></option>
-						</select>
-					</div>
-					<br>
-					<div class="form-group">
-						<label for="question">Soru</label>
-						<input class="form-control" type="text" id="question" name="question" size="51">
-					</div>
-					<div class="form-group">
-						<label for="answer">Cevap</label>
-						<input class="form-control" type="text" id="answer" name="answer" size="50">
-					</div>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-					<button type="submit" class="btn btn-primary">Kaydet</button>
-				</div>
-			</form>
+		<div class="card-footer">
+				<input type="submit" class="btn btn-primary" value="Kaydet">
 		</div>
-		<!-- /.modal-content -->
+	  </form>
 	</div>
-	<!-- /.modal-dialog -->
-</div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="animated fadeIn">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-edit"></i> Kayıtlı Sorular
+        </div>
+        <div class="card-body">
+          <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+			  <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped table-bordered datatable dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="border-collapse: collapse !important">
+            <thead>
+              <tr role="row">
+				  <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending" style="width: 68px;">Soru</th>
+				  <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Date registered: activate to sort column ascending" style="width: 68px;">Cevap</th>
+				  <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 52px;">Actions</th></tr>
+            </thead>
+            <tbody>
+				@foreach ($faqs as $faq)
+				<tr role="row" class="odd">
+					<td class="sorting_1">{{ $faq->question }}</td>
+					<td>
+					  {{ $faq->answer }}
+					</td>
+					<td>
+					  <a class="btn btn-success" href="#">
+			  <i class="fa fa-search-plus "></i>
+			</a>
+					  <a class="btn btn-info" href="#">
+			  <i class="fa fa-edit "></i>
+			</a>
+					  <a class="btn btn-danger" href="#">
+			  <i class="fa fa-trash-o "></i>
+	
+			</a>
+					</td>
+				@endforeach
+            </tbody>
+          </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 31 to 32 of 32 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 @endsection
 @section('page-scripts')
 

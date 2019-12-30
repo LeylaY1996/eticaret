@@ -5,7 +5,7 @@ namespace App\Http\Controllers\backoffice;
 use App\Model\Policy;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use DB;
 class PolicyController extends Controller
 {
     public function policy(){
@@ -19,10 +19,10 @@ class PolicyController extends Controller
             'description' => 'required',
             ]);
 
-            $exists = DB::table('history')->first();
+            $exists = DB::table('policies')->first();
 
             if ($exists) {
-                   $result = DB::table('history')->where('id', $exists->id)->update([
+                   $result = DB::table('policies')->where('id', $exists->id)->update([
                    'title' => $request->title,
                    'description' => $request->description,
                    'image' => $request->image

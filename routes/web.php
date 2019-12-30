@@ -25,6 +25,8 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
     Route::post('politika-kaydet','PolicyController@policySave')->name('policySave');
 
     Route::get('/sss','FaqController@faq')->name('faq');
+    Route::post('/sss-kaydet','FaqController@faqSave')->name('faqSave');
+    
     Route::get('/ürün','ProductController@product')->name('product');
     Route::get('/servis','ServiceController@services')->name('services');
     Route::get('/contact','ContactController@contact')->name('contact');

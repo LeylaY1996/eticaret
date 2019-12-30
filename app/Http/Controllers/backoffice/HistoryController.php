@@ -5,7 +5,7 @@ namespace App\Http\Controllers\backoffice;
 use App\Model\History;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use DB;
 class HistoryController extends Controller
 {
     public function history(){
@@ -19,10 +19,10 @@ class HistoryController extends Controller
             'description' => 'required',
             ]);
 
-            $exists = DB::table('history')->first();
+            $exists = DB::table('histories')->first();
 
             if ($exists) {
-                   $result = DB::table('history')->where('id', $exists->id)->update([
+                   $result = DB::table('histories')->where('id', $exists->id)->update([
                    'title' => $request->title,
                    'description' => $request->description,
                    'image' => $request->image
