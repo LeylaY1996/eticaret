@@ -28,8 +28,13 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
     Route::post('/sss-kaydet','FaqController@faqSave')->name('faqSave');
     
     Route::get('/ürün','ProductController@product')->name('product');
+
     Route::get('/servis','ServiceController@services')->name('services');
+    Route::post('/servis-kaydet','ServiceController@servicesSave')->name('servicesSave');
+
     Route::get('/contact','ContactController@contact')->name('contact');
+    Route::post('/iletisim-kaydet','ContactController@contactSave')->name('contactSave');
+
     Route::get('/campaigns','CampaignsController@campaigns')->name('campaigns');
     Route::get('/price-list','PriceListController@priceList')->name('priceList');
 });

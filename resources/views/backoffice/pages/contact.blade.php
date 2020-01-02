@@ -4,51 +4,34 @@
 @section('page.title','İletişim')
 
 @section('content')
-<div class="col-sm-6">
-
+<div class="col-sm-12">
+<form action="{{ route('backoffice.contactSave') }}" method="POST">
+  {{ csrf_field() }}
     <div class="card">
       <div class="card-header">
-        <strong>Company</strong>
-        <small>Form</small>
+        <strong>İletişim Bilgileri</strong>
       </div>
       <div class="card-body">
         <div class="form-group">
-          <label for="company">Company</label>
-          <input type="text" class="form-control" id="company" placeholder="Enter your company name">
+          <label for="adress">Adres</label>
+          <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresi giriniz..">
         </div>
-
         <div class="form-group">
-          <label for="vat">VAT</label>
-          <input type="text" class="form-control" id="vat" placeholder="PL1234567890">
+          <label for="mail">Email</label>
+          <input type="email" class="form-control" id="mail" name="mail" placeholder="Mail adresini giriniz.">
         </div>
-
         <div class="form-group">
-          <label for="street">Street</label>
-          <input type="text" class="form-control" id="street" placeholder="Enter street name">
+          <label for="telephone">Telefon</label>
+          <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Telefon numaranızı giriniz...">
         </div>
-
-        <div class="row">
-
-          <div class="form-group col-sm-8">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city" placeholder="Enter your city">
-          </div>
-
-          <div class="form-group col-sm-4">
-            <label for="postal-code">Postal Code</label>
-            <input type="text" class="form-control" id="postal-code" placeholder="Postal Code">
-          </div>
-
         </div>
-        <!--/.row-->
-
-        <div class="form-group">
-          <label for="country">Country</label>
-          <input type="text" class="form-control" id="country" placeholder="Country name">
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Kaydet</button>
         </div>
       </div>
     </div>
-
+  </form>
+ 
   </div>
 @endsection
 

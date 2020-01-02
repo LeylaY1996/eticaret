@@ -31,7 +31,6 @@ class AboutusController extends Controller
                    'image' => $request->image
                     ]);
             } else {
-                
                 $post = new AboutUs();
                 $post->title = $request->title;
                 $post->description = $request->description;
