@@ -36,6 +36,8 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
     Route::post('/iletisim-kaydet','ContactController@contactSave')->name('contactSave');
 
     Route::get('/campaigns','CampaignsController@campaigns')->name('campaigns');
+    Route::post('/kampanya-kaydet','CampaignsController@campaignsSave')->name('campaignsSave');
+
     Route::get('/price-list','PriceListController@priceList')->name('priceList');
 });
 
