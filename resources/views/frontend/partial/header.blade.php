@@ -25,30 +25,32 @@
 
 
         <div class="row nomargin">
-          <div class="span4">
+          <div class="span3">
             <div class="logo">
               <a href="index.html"><img src="img/logo.png" alt="" /></a>
             </div>
           </div>
-          <div class="span8">
+          <div class="span9">
             <div class="navbar navbar-static-top">
               <div class="navigation">
                 <nav>
                   <ul class="nav topnav">
                     <li class="dropdown active">
-                      <a href="index.html"><i class="icon-home"></i> Home <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index-alt2.html">Homepage 2</a></li>
-                        <li><a href="index-alt3.html">Homepage 3</a></li>
-                        <li><a href="index-alt4.html">Parallax slider</a></li>
-                        <li><a href="index-landingpage.html">Landing page</a></li>
-                      </ul>
+                      <a href="{{ route('frontend.anasayfa') }}"><i class="icon-home"></i> ANASAYFA</a>
                     </li>
                     <li class="dropdown">
-                      <a href="#">Features <i class="icon-angle-down"></i></a>
+                      <a href="#">BİZ KİMİZ? <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="{{ route('frontend.aboutus') }}">Hakkımızda</a></li>
+                        <li><a href="{{ route('frontend.history') }}">Tarihçemiz</a></li>
+                        <li><a href="{{ route('frontend.policy') }}">Kalite ve Müşteri Memnunuiyet Politikası</a></li>
+                       </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">ÜRÜNLERİMİZ <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
                         <li><a href="typography.html">Typography</a></li>
-                        <li><a href="components.html">Components</a></li>
+                        <li><a href=".html">Components</a></li>
                         <li><a href="icons.html">Icons</a></li>
                         <li><a href="icon-variations.html">Icon variations</a></li>
                         <li class="dropdown"><a href="#">3rd menus<i class="icon-angle-right"></i></a>
@@ -60,7 +62,7 @@
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="#">Pages <i class="icon-angle-down"></i></a>
+                      <a href="#">BAYİLERİMİZ <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
                         <li><a href="about.html">About us</a></li>
                         <li><a href="faq.html">FAQ</a></li>
@@ -71,16 +73,10 @@
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="#">Portfolio <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
-                        <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
-                        <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
-                        <li><a href="portfolio-detail.html">Portfolio detail</a></li>
-                      </ul>
+                      <a href="{{ route('frontend.service') }}">SERVİSLERİMİZ</a>
                     </li>
                     <li class="dropdown">
-                      <a href="#">Blog <i class="icon-angle-down"></i></a>
+                      <a href="#">KARİYER <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
                         <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
                         <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
@@ -90,7 +86,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="contact.html">Contact </a>
+                      <a href="{{ route('frontend.contact') }}">İLETİŞİM </a>
                     </li>
                   </ul>
                 </nav>

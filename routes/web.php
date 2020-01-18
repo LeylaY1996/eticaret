@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Route;
+
 
 Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice.'],function() {
 
@@ -32,7 +34,7 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
     Route::get('/servis','ServiceController@services')->name('services');
     Route::post('/servis-kaydet','ServiceController@servicesSave')->name('servicesSave');
 
-    Route::get('/contact','ContactController@contact')->name('contact');
+    Route::get('/iletisim','ContactController@contact')->name('contact');
     Route::post('/iletisim-kaydet','ContactController@contactSave')->name('contactSave');
 
     Route::get('/campaigns','CampaignsController@campaigns')->name('campaigns');
@@ -51,6 +53,11 @@ Route::group(['namespace'=>'backoffice','prefix'=>'backoffice','as'=>'backoffice
 
 
 
-Route::group(['namespace'=>'frontend','prefix'=>'frontend','as'=>'frontend'], function(){
+Route::group(['namespace'=>'frontend','prefix'=>'frontend','as'=>'frontend.'], function(){
     Route::get('/anasayfa','DashboardController@index')->name('anasayfa');
+    Route::get('/hakkimizda','AboutusController@aboutus')->name('aboutus');
+    Route::get('/tarihce','HistoryController@history')->name('history');
+    Route::get('/kalite-ve-musteri-memnuniyet-politikası','PolicyController@policy')->name('policy');
+    Route::get('/servisler','ServiceController@service')->name('service');
+    Route::get('/iletisim','ContactController@contact')->name('contact');
 });
